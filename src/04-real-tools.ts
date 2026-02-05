@@ -61,7 +61,6 @@ const toolHandlers: Record<string, (args: any) => string> = {
     },
     read_file: ({ path }) => {
         try {
-            const { readFileSync } = require("fs");
             return readFileSync(path, "utf-8");
         } catch (e: any) {
             return `Ошибка: ${e.message}`;
